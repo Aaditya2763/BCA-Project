@@ -1,0 +1,56 @@
+<% layout('layout/userboilerplate') -%>
+<%- include("../partials/flash") %> 
+<div class="row">
+    <div class="col-lg-6">
+        <div class="col-lg-4">
+            <div class="card mx-auto mb-3" style="width: 23rem;">
+                <img src="#" class="card-img-top" alt="profile ">
+                <div class="card-body">
+                  <h5 class="card-title">Username </h5>
+                  <h5 class="card-text">Email</h5>
+                  <h5 class="card-title">Phone</h5>
+                  <a href="#" class="btn btn-sm btn-primary">Cart Items</a>
+                  <form class="d-inline-block" action="/user/cart" method="post">
+                    <button class="btn btn-sm btn-success">wishlist</button>
+                  </form>
+                
+                   
+                  <a href="/products/edit" class="btn btn-sm btn-secondary">Edit Profile</a>
+              
+               
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <h1 class="display-6">User Details</h1>
+        <div class="mb-3">
+               <div class="col-lg-4">
+            <div class="card mx-auto mb-3" style="width: 23rem;">
+               
+                <div class="card-body">
+                  <h5 class="card-title">Username : <span>username</span></h5>
+                  <h5 class="card-text">Email :<span>username</span></h5>
+                  <h5 class="card-title">Phone : <span>username</span></h5>
+                  <a href="#" class="btn btn-sm btn-primary">Cart Items</a>
+                  <form class="d-inline-block" action="/user/cart" method="post">
+                    <button class="btn btn-sm btn-success">wishlist</button>
+                  </form>
+                
+                   
+               
+                 <form action="/products"  class="d-inline-block">
+                     <button type="submit" class="btn btn-sm btn-danger">Delete Account</button>
+                 </form>
+               
+                </div>
+            
+            
+        </div>
+
+        
+          
+        </div>
+       
+    </div>
+</div>

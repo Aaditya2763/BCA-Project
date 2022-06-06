@@ -1,0 +1,62 @@
+
+<% layout('layout/userboilerplate') -%>
+
+<%- include("../partials/flash") %> 
+<h4 class="display-4 bg-light p-3 rounded"><i class="fa-solid fa-book-open" style="font-size:4rem;color:black;"></i> All Queries</h4>
+  <table class="table table-hover border border-dark">
+    <thead>
+      <tr>
+        <th scope="col-sm-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+
+            </label>
+        </th>
+        <th scope="col">Id</th>
+        <th scope="col">username</th>
+        <th scope="col">Query Subject</th>
+        <th scope="col">created At</th>
+      
+        
+      </tr>
+    </thead>
+   
+    <tbody>
+      <tr>
+        <th scope="row">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+            </label>
+          </div>
+
+        </th>
+        <td>Quizid</td>
+        <td>QuizName</td>
+        <td>QuizSubject</td>
+        <td>CreatedBy</td>
+        <td>QuitStart</td>
+        <td>QuitEnd</td>
+        
+        <td>
+          <div class="d-flex justify-content-center ">
+
+
+            <form action="/user/query" method="post">
+              <button type="submit" class="btn btn-outline-warning mx-1"><i class="fa-solid fa-eye"></i></i></button>
+
+            </form>
+
+            <form action="/admin/queries">
+              <button type="submit" class="btn btn-outline-danger mx-1"><i class="fa-solid fa-trash-can"></i>
+                 </button>
+            </form>
+          </div>
+        </td>
+
+      </tr>
+
+    </tbody>
+  
+  </table>

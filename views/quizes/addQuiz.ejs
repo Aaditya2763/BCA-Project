@@ -1,0 +1,67 @@
+<% layout('layout/userboilerplate') -%>
+
+
+
+<div class="border p-3 mx-auto w-50 shadow">
+    <h1>Add Quiz</h1>
+    <form action="/products" method="post" class="form-validate" novalidate>
+        <div class="mb-3">
+            <label for="quizTitle" class="form-label"></label>Quiz Title</label>
+            <input type="text" class="form-control" name="quizTitle" id="quizTitle" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>    
+        <div class="mb-3">
+            <label for="quizSubject" class="form-label">Quiz Subject</label>
+            <input type="number" class="form-control" name="quizSubject" id="quizSubject" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+        </div>   
+        <div class="mb-3">
+            <label for="img" class="form-label">Quiz Author</label>
+            <input type="text" class="form-control" name="img" id="img" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+        </div>    
+        <div class="mb-3">
+            <label for="startAt" class="form-label">Quiz Start Time</label>
+            <input type="datetime-local" class="form-control" name="startAt" id="startAt" rows="3" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div> 
+         <div class="mb-3">
+            <label for="endAt" class="form-label">Quiz End Time</label>
+            <input type="datetime-local" class="form-control" name="endAt" id="endAt" rows="3" required></textarea>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div> 
+        <button type="submit" class="btn btn-success btn-sm">Submit</button>
+    </form>
+</div>
+
+<script>
+    (function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.form-validate')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
